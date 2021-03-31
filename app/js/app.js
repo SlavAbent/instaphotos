@@ -1,3 +1,6 @@
+import cards from './cards.js';
+cards()
+
 const login = document.querySelector('.login')
 const containerInfo = document.querySelector('.container__info')
 const loginInput = document.querySelectorAll('.login__input')
@@ -13,7 +16,6 @@ const createTextInfo = () => {
     return p 
 }
 const checkAuthorized = (text) => {
-    // console.log(createTextInfo(text));
     let lName = loginName.value
     let lPass = loginPass.value
     const objText = [
@@ -24,8 +26,6 @@ const checkAuthorized = (text) => {
             no: 'Что-то пошло не так...'
         },
     ]
-
-   
     if(lName === '' && lPass === '' || lName === '' || lPass === ''){
         login.style.display = 'flex'
         containerInfo.style.display = 'none'
